@@ -3,7 +3,7 @@
 #3/1/16
 
 #This code is used to created a modified flow accumultaion 
-#tool for use in ESRI ArcGIS.
+#tool for use in ESRI ArcGIS. (Lab 5)
 
 # import library packages
 import arcpy, os, sys, numpy
