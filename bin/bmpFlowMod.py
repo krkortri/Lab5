@@ -1,19 +1,34 @@
 #Kyle Kortright
-#GIS-Based Modeling-Lab 5
+#GIS-Based Modeling
+#Lab 5
 #3/1/16
 
 #This code is used to created a modified flow accumultaion 
 #tool for use in ESRI ArcGIS.
 
-# import library packages
+# Import library packages
 import arcpy, os, sys, numpy
 
-# get parameters (input and output datasets, filenames, etc)
+# Read in flow direction raster
+Flow_Dir = arcpy.Raster('Lab5.gdb/Flow_Dir')
+lowerLeft = arcpy.Point(Flow_Dir.extent.XMin,aerial.extent.YMin)
+cellSize = Flow_Dir.meanCellWidth
 
-# set environment 
+# Read in raster BMP points
+BMP = arcpy.Raster('Lab5.gdb/BMP_Points')
 
-# create variables to hold input and output datasets
+# Convert rasters to numpy arrays
+DEM_nump = arcpy.RasterToNumPyArray(Flow_Dir,nodata_to_value=0)
+BMP_nump = arcpy.RasterToNumPyArray(BMP,nodata_to_value=0)
 
-# process (loop through) datasets
+# Set environment 
+arcpy.env.overwriteOutput = True
+arcpy.env.outputCoordinateSystem = Flow_Dir
+arcpy.env.cellSize = cellSize
 
-# save outputs
+# Create variables to hold datasets
+
+# Process (loop through) datasets
+
+
+# Save outputs
