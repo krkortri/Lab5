@@ -5,7 +5,6 @@
 #This code is used to created a modified flow accumultaion 
 #tool for use in ESRI ArcGIS.
 
-
 # import library packages
 import arcpy, os, sys, numpy
 
